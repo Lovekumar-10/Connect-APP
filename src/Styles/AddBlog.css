@@ -1,0 +1,55 @@
+.add-blog-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .add-blog-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .add-blog-form input,
+  .add-blog-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+  }
+  
+  .add-blog-form textarea {
+    height: 150px;
+  }
+  
+  .add-blog-form button {
+    padding: 12px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .add-blog-form button:hover {
+    background: #43a047;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .add-blog-form {
+      padding: 20px;
+      margin: 20px;
+    }
+  }
+  

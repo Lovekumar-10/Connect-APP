@@ -1,0 +1,176 @@
+.timeline-container {
+    padding: 4rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .timeline-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: -1px;
+    z-index: 1;
+  }
+  .timeline-title::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: #00c781;
+    margin: 10px auto 0;
+  }
+  
+  .timeline-wrapper {
+    position: relative;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  /* Separate classes for each line */
+  .desktop-line {
+    display: block;
+  }
+  
+  .mobile-line {
+    display: none;
+  }
+  
+  .timeline-items {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+    text-align: left;
+  }
+  
+  .timeline-content {
+    background-color: #1f2937;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .timeline-star {
+    font-size: 2rem;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: blink 0.5s infinite ease-in-out;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(1.3);
+    }
+  }
+  
+  .timeline-year {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-bottom: 0.25rem;
+  }
+  
+  .timeline-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-description {
+    font-size: 1rem;
+    color: #d1d5db;
+  }
+  
+  /* Animation (Optional) */
+  .animate-left {
+    animation: fadeInLeft 1s ease forwards;
+  }
+  
+  .animate-right {
+    animation: fadeInRight 1s ease forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Mobile Styles */
+  @media (max-width: 768px) {
+    .timeline-item {
+      width: 100%;
+      left: 0 !important;
+      text-align: center !important;
+      padding: 2rem 1rem;
+    }
+  
+    .timeline-content {
+      margin: 0 auto;
+    }
+  
+    .timeline-line.desktop-line {
+      display: none;
+    }
+  
+    .timeline-line.mobile-line {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #4ade80, #3b82f6);
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
+  

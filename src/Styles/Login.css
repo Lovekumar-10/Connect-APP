@@ -1,0 +1,171 @@
+/* Entire Wrapper */
+.login-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Left Section (Image) */
+.login-left {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.login-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Right Section (Form) */
+.login-right {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f5f7fa;
+}
+
+.register-link {
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.register-link a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.welcome-text {
+  color: #777;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* Form Styles */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signup-form input:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+
+.recovery-link {
+  color: #4285f4;
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.recovery-link:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* OR divider */
+.or-text {
+  text-align: center;
+  color: #999;
+  margin: 25px 0 10px;
+}
+
+
+/* Social Icons Row */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Scoial-icons-a {
+  width: 52px;
+  height: 52px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(148, 148, 148, 0.585);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Scoial-icons-a:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(106, 146, 255, 0.4);
+}
+
+
+
+
+/* Google Button Reused */
+.logo-ancher {
+  text-decoration: none;
+}
+
+
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+  }
+
+  .login-left {
+    display: none;
+  }
+
+  .login-right {
+    padding: 30px;
+  }
+
+  
+
+  
+}

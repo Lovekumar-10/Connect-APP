@@ -1,0 +1,123 @@
+.analytics-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #343a40;
+  }
+  
+  .summary-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .card {
+    flex: 1 1 200px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    background-color: #e9ecef;
+    transform: translateY(-3px);
+  }
+  
+  .card span {
+    font-weight: bold;
+    float: right;
+    color: #007bff;
+  }
+  
+  .section {
+    margin-top: 40px;
+  }
+  
+  .section h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #495057;
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+  }
+  
+  .platform-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .platform-table th,
+  .platform-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .platform-table th {
+    background-color: #f1f3f5;
+    color: #343a40;
+  }
+  
+  .timeline,
+  .top-posts {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .timeline li,
+  .top-posts li {
+    margin: 8px 0;
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    font-size: 15px;
+    color: #212529;
+    transition: background 0.3s;
+  }
+  
+  .top-posts li:hover {
+    background: #e2e6ea;
+  }
+  
+  /* 🌐 Responsive */
+  @media (max-width: 768px) {
+    .summary-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  
+    .platform-table th, .platform-table td {
+      font-size: 14px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    .section h3 {
+      font-size: 18px;
+    }
+  }

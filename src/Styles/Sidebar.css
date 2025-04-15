@@ -1,0 +1,142 @@
+.sidebar {
+  position: fixed;
+  top: 60px; /* below topbar */
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  background-color: #2c3e50;
+  color: #fff;
+  z-index: 999; /* below Topbar */
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Dashboard Title */
+.sidebar .title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 20px 12px 10px;
+  margin-bottom: 10px;
+}
+
+/* Separator Line */
+.sidebar hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 12px 20px;
+}
+
+/* Menu Item */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  color: #ecf0f1;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Icon Container */
+.icon-container {
+  width: 32px;
+  height: 32px;
+  background-color: #34495e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+/* Hover */
+.menu-item:hover {
+  background-color: #3d566e;
+}
+
+/* Active */
+
+.menu-item.active {
+  background-color: #1abc9c;
+  font-weight: bold;
+  border-left: 4px solid #16a085;
+  color: #ffffff;
+  transform: scale(1.02);
+  box-shadow: inset 2px 0 0 #16a085;
+}
+
+
+/* Apps Submenu */
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 10px;
+}
+
+/* Show submenu */
+.submenu.open {
+  max-height: 500px;
+}
+
+/* Submenu Item */
+.submenu .menu-item {
+  padding-left: 40px;
+  font-size: 0.95rem;
+  background-color: #2c3e50;
+}
+
+/* Hover effect for submenu items */
+.submenu .menu-item:hover {
+  background-color: #3d566e;
+  color: #ffffff;
+}
+
+/* Hamburger Toggle (optional) */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #ecf0f1;
+  margin: 10px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 300;
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* Responsive: Hide sidebar on small screen */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
